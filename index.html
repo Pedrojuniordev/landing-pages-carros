@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Loja de Carros</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Loja de Carros</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="estoque.html">Estoque</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <img src="imagens/ONIX.png" alt="onix">
+        <h2>Bem-vindo à nossa loja de carros!</h2>
+        <p>Encontre aqui os melhores carros usados e zero quilômetro.</p>
+        <button>Ver Detalhes</button>
+    </section>
+
+    <section id="estoque">
+        <h2>Estoque</h2>
+        <p>Confira nossa seleção de carros disponíveis para venda.</p>
+    
+        <table>
+            <tr>
+                <td>
+                    <img src="imagens/carro01.png" alt="Carro 1">
+                    <p>Descrição do Carro 1</p>
+                    <button>Ver Detalhes</button>
+                </td>
+                <td>
+                    <img src="imagens/carro02.png" alt="Carro 2">
+                    <p>Descrição do Carro 2</p>
+                    <button>Ver Detalhes</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="imagens/carro03.png" alt="Carro 3">
+                    <p>Potência de 70 cv, e torque máximo de 8,8 kgfm. Câmbio manual de 5 marchas e tração dianteira.<br>
+                        Freios à disco, suspensão dianteira independente tipo McPherson e mola helicoidal. Consumo na cidade 13,3 km/l e na estrada 17,7 km/l</p>
+                    <button>Ver Detalhes</button>
+                </td>
+                <td>
+                    <img src="imagens/carro04.png" alt="Carro 4">
+                    <p>Descrição do Carro 4</p>
+                    <button>Ver Detalhes</button>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="servicos">
+        <h2>Serviços</h2>
+        <p>Além de venda de carros, oferecemos serviços de manutenção e reparo.</p>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para obter mais informações.</p>
+    </section>
+
+    <footer>
+        <div id="map"></div>
+        <p>&copy; 2023 Loja de Carros. Todos os direitos reservados.</p>
+    </footer>
+</body>
+<script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_DE_API&callback=initMap" async defer></script>
+<script>
+    function initMap() {
+        var myLatLng = {lat: -23.5505, lng: -46.6333}; // Coordenadas da localização da loja
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: myLatLng,
+            zoom: 15
+        });
+
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Loja de Carros'
+        });
+    }
+</script>
+</html>
