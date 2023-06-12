@@ -1,0 +1,348 @@
+/* Breakpoints */
+/* Media Queries */
+@font-face {
+  font-family: 'Louis';
+  src: url("fonts/louisregular-webfont.eot");
+  src: url("fonts/louisregular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/louisregular-webfont.woff2") format("woff2"), url("fonts/louisregular-webfont.woff") format("woff"), url("fonts/louisregular-webfont.ttf") format("truetype"), url("fonts/louisregular-webfont.svg#louis_regularregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Louis Bold';
+  src: url("fonts/louisbold-webfont.eot");
+  src: url("fonts/louisbold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/louisbold-webfont.woff2") format("woff2"), url("fonts/louisbold-webfont.woff") format("woff"), url("fonts/louisbold-webfont.ttf") format("truetype"), url("fonts/louisbold-webfont.svg#louis_boldbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Louis', Arial, Helvetica, sans-serif;
+}
+
+/* .carousel {
+   .slick-dots {
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+
+        li {
+            position: relative;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+
+            button {
+                border: 0;
+                background: 0;
+                padding: 0;
+                margin: 0;
+                color: transparent;
+                position: absolute;
+                margin: auto auto;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: block;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                border-width: 2px;
+                border-style: solid;
+                border-color: transparent;
+                background-color: #b3b3b3;
+                transition: border-color background-color 0.25s;
+                transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+            }
+
+            & + li {
+                margin-left: 7px;
+            }
+
+            &.slick-active {
+
+                button {
+                    background-color: transparent;
+                    border-color: #b3b3b3;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    } 
+}*/
+
+.carousel button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.carousel input[type="button"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.carousel input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.carousel .slick-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.carousel .slick-slide img {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .carousel .slick-slide img {
+    width: 85%;
+  }
+}
+
+.carousel .carousel button {
+  background: transparent;
+}
+
+.carousel .slick-arrow {
+  position: absolute;
+  z-index: 100;
+  width: 2.25rem;
+  height: 2.25rem;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  border: transparent;
+  color: transparent;
+  outline: none;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.carousel .slick-arrow:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  background: url(../images/seta-arrow.svg) no-repeat;
+  background-size: contain;
+}
+
+.carousel .slick-arrow.slick-prev {
+  left: -40px;
+  z-index: 1000001;
+}
+
+.carousel .slick-arrow.slick-prev:before {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  -webkit-filter: FlipH;
+          filter: FlipH;
+}
+
+@media (max-width: 600px) {
+  .carousel .slick-arrow.slick-prev {
+    left: -8px;
+  }
+}
+
+/* @media (max-width: 420px) {
+  .carousel .slick-arrow.slick-prev {
+    left: 0px;
+  }
+} */
+
+.carousel .slick-arrow.slick-next {
+  right: -35px;
+}
+
+/* @media (max-width: 420px) {
+  .carousel .slick-arrow.slick-next {
+    right: -8px;
+  }
+} */
+
+@media (max-width: 600px) {
+  .carousel .slick-arrow.slick-next {
+    right: -8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .carousel .slick-arrow {
+    width: 28px;
+    height: 28px;
+  }
+  .carousel .slick-arrow.slick-prev:before {
+    width: 28px;
+    height: 28px;
+  }
+  .carousel .slick-arrow:before {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.colorchips {
+  margin-bottom: 10px;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.colorchips ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.colorchips ul li button {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  outline: none;
+  border: 3px solid #fff;
+  border-radius: 100px;
+  outline: none;
+}
+
+.colorchips ul li button span {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0;
+  position: absolute;
+  width: calc(100% + 14px);
+  height: calc(100% + 14px);
+  top: -7px;
+  left: -7px;
+  border-radius: 100px;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  z-index: -1;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.colorchips ul li button:before {
+  content: '';
+  background: #ccc;
+  opacity: 0;
+  position: absolute;
+  width: calc(100% + 14px);
+  height: calc(100% + 14px);
+  top: -7px;
+  left: -7px;
+  border-radius: 100px;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  z-index: -1;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+@media (max-width: 420px) {
+  .colorchips ul li button {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.colorchips ul li button:active:not(.active):before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+@media (min-width: 600px) {
+  .colorchips ul li button:hover:not(.active):before {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.colorchips ul li button.active span {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.colorchips ul li + li {
+  margin-left: 15px;
+}
+
+.colorchips .text-color {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 15px;
+  text-transform: uppercase;
+  opacity: 0;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.colorchips .text-color.active {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+@media (max-width: 600px) {
+  .colorchips .text-color {
+    font-size: 18px;
+  }
+}
+
+.tooltip {
+  top: 5px !important;
+}
+/*# sourceMappingURL=style.css.map */

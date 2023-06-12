@@ -1,0 +1,50 @@
+(function () {
+    const setCarouselDTM = function() {
+        $('.carousel .slick-prev').attr('data-dtm', 'colorizer:exterior:rotate').addClass('stat-arrow-prev');
+        $('.carousel .slick-next').attr('data-dtm', 'colorizer:exterior:rotate').addClass('stat-arrow-next');
+        $('.slick-dots li button').attr('data-dtm', 'colorizer:exterior:rotate').addClass('stat-dots');
+    }
+
+    // On init Carousel
+    $('.carousel').on('init', function(slick){
+        setTimeout(setCarouselDTM);
+    });
+
+    // Run Carousel
+    $('.carousel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        lazyLoad: 'progressive'
+    });
+
+    // Colorchips trigger
+    var filtered = false;
+    $('.colorchips button').on('click', function () {
+        var color = $(this).data('color');
+        var text = $(this).data('original-title');
+        var $btn = $(this);
+
+        $('.colorchips .text-color').removeClass('active');
+
+        if(filtered !== color) {
+            $('.carousel').slick('slickUnfilter');
+            $('.colorchips button').removeClass('active');
+            $('.carousel').slick('slickFilter', '[data-color="' + color + '"]');
+            setCarouselDTM();
+            $btn.addClass('active');
+            setTimeout(function() {
+                $('.colorchips .text-color').html(text);
+                $('.colorchips .text-color').addClass('active');
+                filtered = color;
+            }, 300);
+        }
+        
+    });
+
+    // Run tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+
+    // Set filter for first color
+    $('.carousel').slick('slickFilter', '[data-color="' + $('.colorchips button.active').data('color') + '"]');
+})();
