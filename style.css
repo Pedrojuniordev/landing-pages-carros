@@ -1,7 +1,6 @@
 /* Estilos gerais */
 head {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    
 }
 body {
     font-family: Arial, sans-serif;
@@ -59,6 +58,8 @@ header {
 #home {
     background-color: #f2f2f2;
     padding: 20px;
+    img src ="imagem/ONIX: .PNG;"
+    width: 500;
 }
 
 #estoque {
@@ -69,7 +70,8 @@ header {
 #servicos {
     background-color: #f2f2f2;
     padding: 20px;
-}
+    text-align:justify;
+  }
 
 #contato {
     background-color: #e6e6e6;
