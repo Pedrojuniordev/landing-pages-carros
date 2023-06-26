@@ -96,11 +96,10 @@ header {
   width: 100%;
   text-align: center;
   font-size: 20px;
-  color: #333;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
+  color: #007bff;
+  }
 #estoque p{
-  flex-basis: calc(33.33% - 20px);
+  
   background-color: #f2f2f2;
   padding: 5px;
   border-radius: 5px;
@@ -117,6 +116,19 @@ header {
   text-align: left;
   border-radius: 20px;
 }
+#estoque button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor:pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+}
+#estoque button:hover {
+  background-color: #0056b3;
+}
 #servicos {
   text-align: center;
   display: flex;
@@ -128,7 +140,7 @@ header {
   width: 100%;
   text-align: center;
   font-size: 24px;
-  color: rgba(243, 101, 6, 0.877);
+  color: #007bff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 #servicos h4 {
@@ -151,7 +163,7 @@ header {
 #servicos p:hover {
   transform: scale(1.05);
   background-color: #e6e6e6;
-  color: rgba(243, 101, 6, 0.877);
+  color: #007bff;
 }
 
 #contato {
@@ -162,7 +174,7 @@ header {
 
 #contato h2 {
   font-size: 24px;
-  color: rgba(243, 101, 6, 0.877);
+  color: #007bff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   margin-bottom: 20px;
 }
